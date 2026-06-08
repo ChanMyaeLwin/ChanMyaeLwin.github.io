@@ -2,605 +2,1092 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Chan Myae Lwin | Founder & CTO | Enterprise Software Architect
+    </title>
+    <meta
+      name="description"
+      content="Executive profile of Chan Myae Lwin, Founder and Chief Technology Officer of Lawkadat, enterprise software architect, digital transformation specialist, and technology consultant for enterprise organizations."
+    />
+    <meta
+      name="keywords"
+      content="Chan Myae Lwin, Lawkadat, Founder, CTO, Enterprise Software Architect, Software Consultant, Digital Transformation, Enterprise Software, Enterprise Application Development, Myanmar"
+    />
+    <meta name="author" content="Chan Myae Lwin" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://chanmyaelwin.github.io/" />
 
-    <title>Chan Myae Lwin - IT Specialist</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <meta
+      property="og:title"
+      content="Chan Myae Lwin | Founder & CTO | Enterprise Software Architect"
+    />
+    <meta
+      property="og:description"
+      content="Technology entrepreneur and enterprise software architect building digital solutions for enterprise organizations."
+    />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://chanmyaelwin.github.io/" />
+    <meta
+      property="og:image"
+      content="https://chanmyaelwin.github.io/iPortfolio/assets/img/profile-img.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Favicons -->
     <link href="iPortfolio/assets/img/favicon.jpg" rel="icon" />
-    <link
-      href="iPortfolio/assets/img/apple-touch-icon.png"
-      rel="apple-touch-icon"
-    />
+    <link href="iPortfolio/assets/img/favicon.jpg" rel="apple-touch-icon" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
+    <style>
+      :root {
+        --navy: #09213f;
+        --navy-2: #0e315c;
+        --blue: #1f6fbf;
+        --blue-2: #2b88d8;
+        --steel: #5f6f82;
+        --line: #d9e1ea;
+        --soft: #f4f7fb;
+        --white: #ffffff;
+        --ink: #162231;
+        --muted: #647386;
+        --shadow: 0 18px 45px rgba(9, 33, 63, 0.12);
+      }
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="iPortfolio/assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="iPortfolio/assets/vendor/icofont/icofont.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="iPortfolio/assets/vendor/boxicons/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="iPortfolio/assets/vendor/venobox/venobox.css"
-      rel="stylesheet"
-    />
-    <link
-      href="iPortfolio/assets/vendor/owl.carousel/assets/owl.carousel.min.css"
-      rel="stylesheet"
-    />
-    <link href="iPortfolio/assets/vendor/aos/aos.css" rel="stylesheet" />
+      * {
+        box-sizing: border-box;
+      }
 
-    <!-- Template Main CSS File -->
-    <link href="iPortfolio/assets/css/style.css" rel="stylesheet" />
+      html {
+        scroll-behavior: smooth;
+      }
 
-    <!-- =======================================================
-  * Template Name: iPortfolio - v1.5.1
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--white);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .container {
+        width: min(1160px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.96);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav {
+        min-height: 74px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        text-decoration: none;
+      }
+
+      .brand strong {
+        display: block;
+        color: var(--navy);
+        font-size: 15px;
+        letter-spacing: 0.08em;
+        line-height: 1.2;
+      }
+
+      .brand span {
+        display: block;
+        color: var(--steel);
+        font-size: 13px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--steel);
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus {
+        color: var(--blue);
+      }
+
+      .hero {
+        background:
+          linear-gradient(115deg, rgba(9, 33, 63, 0.97), rgba(14, 49, 92, 0.9)),
+          url("iPortfolio/assets/img/hero-bg.jpg") center / cover;
+        color: var(--white);
+      }
+
+      .hero-grid {
+        min-height: 680px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.72fr);
+        align-items: center;
+        gap: 64px;
+        padding: 72px 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: #c7d9ee;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin-bottom: 16px;
+        font-size: clamp(40px, 6vw, 72px);
+        line-height: 1.03;
+        letter-spacing: 0;
+      }
+
+      .hero h2 {
+        margin-bottom: 16px;
+        color: #d9e8f7;
+        font-size: clamp(22px, 3vw, 34px);
+        line-height: 1.25;
+      }
+
+      .hero-copy {
+        max-width: 760px;
+        color: #e8f1fb;
+        font-size: 18px;
+      }
+
+      .role-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 26px 0 0;
+      }
+
+      .role-line span {
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        border-radius: 999px;
+        padding: 8px 13px;
+        color: #eef6ff;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 12px 18px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .button.primary {
+        background: var(--blue-2);
+        color: var(--white);
+      }
+
+      .button.secondary {
+        border-color: rgba(255, 255, 255, 0.42);
+        color: var(--white);
+      }
+
+      .button:hover,
+      .button:focus {
+        transform: translateY(-1px);
+      }
+
+      .hero-card {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-photo {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      .hero-card-info {
+        padding: 24px;
+        background: var(--white);
+        color: var(--ink);
+      }
+
+      .hero-card-info strong {
+        display: block;
+        color: var(--navy);
+        font-size: 19px;
+      }
+
+      .hero-card-info span {
+        color: var(--steel);
+        font-size: 14px;
+      }
+
+      section {
+        padding: 82px 0;
+      }
+
+      .section-soft {
+        background: var(--soft);
+      }
+
+      .section-head {
+        max-width: 800px;
+        margin-bottom: 34px;
+      }
+
+      .section-head h2 {
+        margin-bottom: 12px;
+        color: var(--navy);
+        font-size: clamp(28px, 3vw, 42px);
+        line-height: 1.18;
+      }
+
+      .section-head p {
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 360px;
+        gap: 36px;
+        align-items: start;
+      }
+
+      .lead-panel {
+        border-left: 4px solid var(--blue);
+        padding: 10px 0 10px 24px;
+        color: var(--steel);
+        font-size: 18px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+      }
+
+      .metric,
+      .card,
+      .project-card,
+      .timeline-card,
+      .contact-card {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--white);
+        box-shadow: 0 10px 30px rgba(9, 33, 63, 0.05);
+      }
+
+      .metric {
+        min-height: 122px;
+        padding: 20px;
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--navy);
+        font-size: 26px;
+        line-height: 1.1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 10px;
+        color: var(--steel);
+        font-weight: 700;
+        line-height: 1.35;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        min-height: 130px;
+        padding: 22px;
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+        color: var(--navy);
+        font-size: 18px;
+      }
+
+      .card p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .services-grid,
+      .industry-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .service-item,
+      .industry-item {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 15px 16px;
+        background: var(--white);
+        color: var(--navy);
+        font-weight: 800;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .project-card {
+        padding: 22px;
+      }
+
+      .project-card h3 {
+        color: var(--navy);
+        font-size: 19px;
+        line-height: 1.3;
+      }
+
+      .project-card dl {
+        margin: 16px 0 0;
+      }
+
+      .project-card dt {
+        color: var(--navy);
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .project-card dd {
+        margin: 4px 0 14px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .timeline-card {
+        padding: 22px;
+      }
+
+      .timeline-card h3 {
+        margin-bottom: 4px;
+        color: var(--navy);
+        font-size: 20px;
+      }
+
+      .timeline-card .period {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: var(--blue);
+        font-weight: 800;
+      }
+
+      .timeline-card p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .education-grid,
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .contact-card {
+        padding: 26px;
+      }
+
+      .contact-card h3 {
+        color: var(--navy);
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 12px;
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .contact-list a {
+        color: var(--blue);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .footer {
+        padding: 28px 0;
+        background: var(--navy);
+        color: #c8d5e4;
+        font-size: 14px;
+      }
+
+      @media (max-width: 980px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 16px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          gap: 12px 18px;
+        }
+
+        .hero-grid,
+        .summary-grid,
+        .education-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metrics,
+        .card-grid,
+        .project-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .services-grid,
+        .industry-grid,
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .container {
+          width: min(100% - 28px, 1160px);
+        }
+
+        .hero-grid {
+          min-height: auto;
+          padding: 48px 0;
+          gap: 34px;
+        }
+
+        section {
+          padding: 58px 0;
+        }
+
+        .metrics,
+        .card-grid,
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links a {
+          font-size: 13px;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chan Myae Lwin",
+        "jobTitle": "Founder & Chief Technology Officer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Lawkadat"
+        },
+        "url": "https://chanmyaelwin.github.io/",
+        "email": "mailto:lwin.chanmyae4@gmail.com",
+        "telephone": "+959798392286",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Yangon",
+          "addressCountry": "Myanmar"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/chanmyaelwin",
+          "https://github.com/ChanMyaeLwin"
+        ],
+        "knowsAbout": [
+          "Enterprise Software Architecture",
+          "Digital Transformation",
+          "System Integration",
+          "Project Management",
+          "Insurance Technology",
+          "Enterprise Digital Services"
+        ]
+      }
+    </script>
   </head>
 
   <body>
-    <!-- ======= Mobile nav toggle button ======= -->
-    <button type="button" class="mobile-nav-toggle d-xl-none">
-      <i class="icofont-navigation-menu"></i>
-    </button>
+    <header class="site-header">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Chan Myae Lwin home">
+          <strong>CHAN MYAE LWIN</strong>
+          <span>Founder & Chief Technology Officer</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#summary">Executive Summary</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- ======= Header ======= -->
-    <header id="header">
-      <div class="d-flex flex-column">
-        <div class="profile">
-          <img
-            src="iPortfolio/assets/img/profile-img.jpg"
-            alt=""
-            class="img-fluid rounded-circle"
-          />
-          <h1 class="text-light">
-            <a href="index.html">Chan Myae Lwin</a>
-          </h1>
-          <div class="social-links mt-3 text-center">
-            <a href="https://www.facebook.com/chanmyaelwin.6b" class="facebook"
-              ><i class="bx bxl-facebook"></i
-            ></a>
-            <a href="https://twitter.com/ChanMyaeLwin95" class="twitter"
-              ><i class="bx bxl-twitter"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/chanmyaelwin" class="linkedin"
-              ><i class="bx bxl-linkedin"></i
-            ></a>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Founder & Chief Technology Officer (CTO)</p>
+            <h1 id="hero-title">Chan Myae Lwin</h1>
+            <h2>Technology Entrepreneur and Enterprise Software Architect</h2>
+            <p class="hero-copy">
+              Technology entrepreneur and software engineering professional with
+              extensive experience in enterprise application development,
+              software architecture, digital transformation, and project
+              leadership. Proven expertise in delivering scalable technology
+              solutions across insurance, education, finance, logistics,
+              e-commerce, and business management sectors.
+            </p>
+            <div class="role-line" aria-label="Professional roles">
+              <span>Software Architect</span>
+              <span>Enterprise Solution Consultant</span>
+              <span>Digital Transformation Specialist</span>
+            </div>
+            <div class="hero-actions">
+              <a class="button primary" href="#contact">Contact Me</a>
+            </div>
+          </div>
+          <aside class="hero-card" aria-label="Executive profile card">
+            <img
+              class="hero-photo"
+              src="iPortfolio/assets/img/profile-img.jpg"
+              alt="Professional photograph of Chan Myae Lwin"
+            />
+            <div class="hero-card-info">
+              <strong>Building Enterprise Digital Solutions</strong>
+              <span>For Enterprise and Strategic Operations</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-soft" aria-label="Trust indicators">
+        <div class="container metrics">
+          <div class="metric">
+            <strong>8+</strong>
+            <span>Years Experience</span>
+          </div>
+          <div class="metric">
+            <strong>20+</strong>
+            <span>Projects Delivered</span>
+          </div>
+          <div class="metric">
+            <strong>10+</strong>
+            <span>Industries Served</span>
+          </div>
+          <div class="metric">
+            <strong>Enterprise</strong>
+            <span>Software Expertise</span>
+          </div>
+          <div class="metric">
+            <strong>Enterprise</strong>
+            <span>Delivery Ready</span>
           </div>
         </div>
+      </section>
 
-        <nav class="nav-menu">
-          <ul>
-            <li class="active">
-              <a href="index.html"
-                ><i class="bx bx-home"></i> <span>Home</span></a
-              >
-            </li>
-            <li>
-              <a href="#about"><i class="bx bx-user"></i> <span>About</span></a>
-            </li>
-            <li>
-              <a href="#resume"
-                ><i class="bx bx-file-blank"></i> <span>Resume</span></a
-              >
-            </li>
-            <li>
-              <a href="#contact"><i class="bx bx-envelope"></i> Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- .nav-menu -->
-        <button type="button" class="mobile-nav-toggle d-xl-none">
-          <i class="icofont-navigation-menu"></i>
-        </button>
-      </div>
-    </header>
-    <!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section
-      id="hero"
-      class="d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="hero-container" data-aos="fade-in">
-        <h1>Chan Myae Lwin</h1>
-        <p>
-          I'm
-          <span
-            class="typed"
-            data-typed-items="Developer, MBA Candidate, Founder, Engineer"
-          ></span>
-        </p>
-      </div>
-    </section>
-    <!-- End Hero -->
-
-    <main id="main">
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about">
-        <div class="container">
-          <div class="section-title">
-            <h2>About</h2>
+      <section id="summary">
+        <div class="container summary-grid">
+          <div>
+            <div class="section-head">
+              <h2>Executive Summary</h2>
+              <p>
+                A profile built for tender evaluation, enterprise proposals,
+                corporate capability presentations, investor discussions, and
+                strategic partnerships.
+              </p>
+            </div>
+            <p class="lead-panel">
+              Chan Myae Lwin is a technology leader and enterprise software
+              consultant with 8+ years of software engineering experience across
+              application development, product delivery, technical leadership,
+              and digital transformation consulting.
+            </p>
             <p>
-              An experienced full stack developer and MBA candidate with a
-              strong background in requirement collection, user preference
-              analysis, project scope development, documentation, UAT, and team
-              coordination. I focus on delivering reliable software products on
-              time while connecting technical execution with business goals.
+              His work covers enterprise application development, project
+              leadership, product development, technical team management,
+              business process automation, and implementation of scalable
+              digital platforms. He combines hands-on software architecture with
+              business analysis, stakeholder communication, documentation, user
+              acceptance testing, and delivery management.
+            </p>
+            <p>
+              As Founder and Chief Technology Officer of Lawkadat, he focuses on
+              building practical technology solutions for enterprise
+              organizations that need dependable systems, structured execution,
+              and long-term maintainability.
             </p>
           </div>
+          <aside class="contact-card">
+            <h3>Current Positioning</h3>
+            <p>
+              Founder & CTO of Lawkadat, focused on enterprise software
+              architecture, system integration, digital transformation, and
+              capability delivery for organizational operations.
+            </p>
+            <ul class="contact-list">
+              <li>Primary Sector Focus: Insurance and Enterprise Systems</li>
+              <li>Consulting Focus: Enterprise and Strategic Operations</li>
+              <li>Delivery Focus: Reliable, scalable, documented software</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
 
-          <div class="row">
-            <div class="col-lg-4" data-aos="fade-right">
-              <img
-                src="iPortfolio/assets/img/profile-img.jpg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <h3>Full Stack Web Developer &amp; MBA Candidate.</h3>
-              <p class="font-italic">
-                I build and maintain both front-end and back-end systems, and I
-                am expanding my business leadership skills through MBA studies.
+      <section class="section-soft" id="competencies">
+        <div class="container">
+          <div class="section-head">
+            <h2>Core Competencies</h2>
+            <p>
+              Technical and management capabilities required for enterprise
+              delivery, tender participation, and organizational software
+              transformation.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Software Architecture</h3>
+              <p>Structured design for scalable, maintainable systems.</p>
+            </article>
+            <article class="card">
+              <h3>Enterprise Application Development</h3>
+              <p>Business platforms for operations, reporting, and workflows.</p>
+            </article>
+            <article class="card">
+              <h3>Full Stack Development</h3>
+              <p>Front-end, back-end, API, database, and deployment delivery.</p>
+            </article>
+            <article class="card">
+              <h3>System Integration</h3>
+              <p>Connecting platforms, data flows, and operational systems.</p>
+            </article>
+            <article class="card">
+              <h3>Cloud Infrastructure</h3>
+              <p>Hosting, deployment, monitoring, and environment planning.</p>
+            </article>
+            <article class="card">
+              <h3>Project Management</h3>
+              <p>Planning, coordination, milestones, and delivery control.</p>
+            </article>
+            <article class="card">
+              <h3>Business Process Automation</h3>
+              <p>Workflow digitization and manual process reduction.</p>
+            </article>
+            <article class="card">
+              <h3>Digital Transformation</h3>
+              <p>Technology adoption aligned with business operations.</p>
+            </article>
+            <article class="card">
+              <h3>Product Development</h3>
+              <p>From idea validation to usable product releases.</p>
+            </article>
+            <article class="card">
+              <h3>Technical Leadership</h3>
+              <p>Guidance for teams, architecture choices, and quality control.</p>
+            </article>
+            <article class="card">
+              <h3>Cybersecurity Awareness</h3>
+              <p>Security-conscious development and operational risk awareness.</p>
+            </article>
+            <article class="card">
+              <h3>Technical Documentation</h3>
+              <p>Requirements, APIs, test plans, user guides, and handover.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <div class="section-head">
+            <h2>Professional Services</h2>
+            <p>
+              Services prepared for enterprise proposals, public-sector
+              implementation requirements, system modernization, and long-term
+              technical support.
+            </p>
+          </div>
+          <div class="services-grid">
+            <div class="service-item">Software Development</div>
+            <div class="service-item">System Integration</div>
+            <div class="service-item">Requirement Analysis</div>
+            <div class="service-item">System Design</div>
+            <div class="service-item">API Development</div>
+            <div class="service-item">Database Design</div>
+            <div class="service-item">Testing & Quality Assurance</div>
+            <div class="service-item">User Training</div>
+            <div class="service-item">Documentation</div>
+            <div class="service-item">Deployment & Maintenance</div>
+            <div class="service-item">Technical Support</div>
+            <div class="service-item">Digital Transformation Consulting</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-soft" id="industries">
+        <div class="container">
+          <div class="section-head">
+            <h2>Industry Experience</h2>
+            <p>
+              Cross-sector software delivery experience supporting operational
+              systems, digital services, business platforms, and reporting
+              tools.
+            </p>
+          </div>
+          <div class="industry-grid">
+            <div class="industry-item">Insurance</div>
+            <div class="industry-item">Education</div>
+            <div class="industry-item">Retail & E-Commerce</div>
+            <div class="industry-item">Logistics & Transportation</div>
+            <div class="industry-item">Finance</div>
+            <div class="industry-item">Membership Organizations</div>
+            <div class="industry-item">Restaurant Operations</div>
+            <div class="industry-item">Customer Relationship Management</div>
+            <div class="industry-item">Enterprise Digital Services</div>
+            <div class="industry-item">Business Management Systems</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <div class="section-head">
+            <h2>Major Project Categories</h2>
+            <p>
+              Selected project categories are presented without confidential
+              client details, focusing on business need, solution approach,
+              technology scope, and delivery outcome.
+            </p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <h3>Insurance Member Management Platform</h3>
+              <dl>
+                <dt>Business Challenge</dt>
+                <dd>Member data, policy workflows, and service tracking.</dd>
+                <dt>Solution</dt>
+                <dd>Centralized member platform with role-based workflows.</dd>
+                <dt>Technology</dt>
+                <dd>Laravel, APIs, relational database, reporting modules.</dd>
+                <dt>Outcome</dt>
+                <dd>Improved process visibility and operational control.</dd>
+              </dl>
+            </article>
+            <article class="project-card">
+              <h3>School Management Platform</h3>
+              <dl>
+                <dt>Business Challenge</dt>
+                <dd>Manual student, class, and administration processes.</dd>
+                <dt>Solution</dt>
+                <dd>Digital administration platform for education operations.</dd>
+                <dt>Technology</dt>
+                <dd>Web application, database, access control, dashboards.</dd>
+                <dt>Outcome</dt>
+                <dd>Reduced manual work and improved administrative reporting.</dd>
+              </dl>
+            </article>
+            <article class="project-card">
+              <h3>Retail POS & Inventory System</h3>
+              <dl>
+                <dt>Business Challenge</dt>
+                <dd>Stock control, branch operations, and sales visibility.</dd>
+                <dt>Solution</dt>
+                <dd>Integrated retail workflow and inventory monitoring tools.</dd>
+                <dt>Technology</dt>
+                <dd>Web modules, APIs, database design, reporting.</dd>
+                <dt>Outcome</dt>
+                <dd>Better operational tracking and data-driven decisions.</dd>
+              </dl>
+            </article>
+            <article class="project-card">
+              <h3>Food Delivery Platform</h3>
+              <dl>
+                <dt>Business Challenge</dt>
+                <dd>Order handling, restaurant operations, and delivery flow.</dd>
+                <dt>Solution</dt>
+                <dd>Platform modules for ordering, operations, and tracking.</dd>
+                <dt>Technology</dt>
+                <dd>Full stack web development, APIs, database workflows.</dd>
+                <dt>Outcome</dt>
+                <dd>Streamlined delivery process and operational coordination.</dd>
+              </dl>
+            </article>
+            <article class="project-card">
+              <h3>Express Delivery Management System</h3>
+              <dl>
+                <dt>Business Challenge</dt>
+                <dd>Shipment lifecycle, status tracking, and branch operations.</dd>
+                <dt>Solution</dt>
+                <dd>Delivery management system with workflow visibility.</dd>
+                <dt>Technology</dt>
+                <dd>Web application, APIs, reporting, operational database.</dd>
+                <dt>Outcome</dt>
+                <dd>Improved shipment monitoring and process accountability.</dd>
+              </dl>
+            </article>
+            <article class="project-card">
+              <h3>Business ERP Platform</h3>
+              <dl>
+                <dt>Business Challenge</dt>
+                <dd>Fragmented business processes across departments.</dd>
+                <dt>Solution</dt>
+                <dd>Integrated enterprise modules for management operations.</dd>
+                <dt>Technology</dt>
+                <dd>Laravel, modular architecture, database, reports.</dd>
+                <dt>Outcome</dt>
+                <dd>More consistent workflows and centralized information.</dd>
+              </dl>
+            </article>
+            <article class="project-card">
+              <h3>Membership Management System</h3>
+              <dl>
+                <dt>Business Challenge</dt>
+                <dd>Member registration, records, renewals, and communication.</dd>
+                <dt>Solution</dt>
+                <dd>Membership platform for organization administration.</dd>
+                <dt>Technology</dt>
+                <dd>Web application, database workflows, user roles.</dd>
+                <dt>Outcome</dt>
+                <dd>Improved member service and internal administration.</dd>
+              </dl>
+            </article>
+            <article class="project-card">
+              <h3>Restaurant Operations System</h3>
+              <dl>
+                <dt>Business Challenge</dt>
+                <dd>Restaurant workflow, order control, and service monitoring.</dd>
+                <dt>Solution</dt>
+                <dd>Operational modules for restaurant business processes.</dd>
+                <dt>Technology</dt>
+                <dd>Web systems, APIs, database, reporting features.</dd>
+                <dt>Outcome</dt>
+                <dd>Improved branch operations and process standardization.</dd>
+              </dl>
+            </article>
+            <article class="project-card">
+              <h3>Enterprise Reporting Dashboard</h3>
+              <dl>
+                <dt>Business Challenge</dt>
+                <dd>Limited management visibility across operational data.</dd>
+                <dt>Solution</dt>
+                <dd>Dashboard and reporting layers for decision makers.</dd>
+                <dt>Technology</dt>
+                <dd>Data models, analytics views, web reporting interface.</dd>
+                <dt>Outcome</dt>
+                <dd>Clearer reporting and faster management review.</dd>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-soft" id="experience">
+        <div class="container">
+          <div class="section-head">
+            <h2>Professional Experience</h2>
+            <p>
+              Progressive experience across software engineering, project
+              delivery, enterprise development, consulting, and technology
+              leadership.
+            </p>
+          </div>
+          <div class="timeline">
+            <article class="timeline-card">
+              <span class="period">2026 - Present</span>
+              <h3>Founder & CTO</h3>
+              <p>Lawkadat</p>
+            </article>
+            <article class="timeline-card">
+              <span class="period">2023 - 2026</span>
+              <h3>Project Lead / Full Stack Developer</h3>
+              <p>Freelunch Project</p>
+            </article>
+            <article class="timeline-card">
+              <span class="period">2023</span>
+              <h3>Senior Full Stack Developer</h3>
+              <p>Solinx Technology</p>
+            </article>
+            <article class="timeline-card">
+              <span class="period">2021 - 2023</span>
+              <h3>Senior Web Developer</h3>
+              <p>PRO1 Global Home Center</p>
+            </article>
+            <article class="timeline-card">
+              <span class="period">2019 - 2021</span>
+              <h3>Software Engineer</h3>
+              <p>AcePlus Solutions</p>
+            </article>
+            <article class="timeline-card">
+              <span class="period">Internship Experience</span>
+              <h3>Project, Channel, and Software Support</h3>
+              <p>Huawei Technologies, Telenor Myanmar, ACE Data Systems</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="container">
+          <div class="section-head">
+            <h2>Education</h2>
+            <p>
+              Formal academic foundation in business administration and
+              information technology engineering.
+            </p>
+          </div>
+          <div class="education-grid">
+            <article class="timeline-card">
+              <span class="period">2024 - 2026</span>
+              <h3>Master of Business Administration (MBA)</h3>
+              <p>28th Batch, Yangon University of Economics</p>
+              <p>
+                Focused on business strategy, operations, leadership,
+                entrepreneurship, and the insurance sector.
               </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="icofont-rounded-right"></i>
-                      <strong>Birthday:</strong> 4 Dec 1995
-                    </li>
-                    <li>
-                      <i class="icofont-rounded-right"></i>
-                      <strong>Phone:</strong>
-                      <a href="tel:+959798392286">+95 979 839 2286</a>
-                    </li>
-                    <li>
-                      <i class="icofont-rounded-right"></i>
-                      <strong>Freelance:</strong> Available
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-12">
-                  <ul>
-                    <li>
-                      <i class="icofont-rounded-right"></i>
-                      <strong>Address:</strong> No. 41 (A+B), Aung Mingalar
-                      St.<br />
-                      4 North Ward, Thaketa, Yangon
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            </article>
+            <article class="timeline-card">
+              <span class="period">2011 - 2018</span>
+              <h3>Bachelor of Engineering (Information Technology)</h3>
+              <p>Technological University (Hmawbi)</p>
+              <p>
+                Academic foundation in software development, systems, and
+                information technology engineering.
+              </p>
+            </article>
           </div>
         </div>
       </section>
-      <!-- End About Section -->
 
-      <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Skills</h2>
-          </div>
-
-          <div class="row skills-content">
-            <div class="col-lg-6" data-aos="fade-up">
-              <div class="progress">
-                <span class="skill">HTML <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">CSS <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">JavaScript <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
+      <section class="section-soft" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <div class="section-head">
+              <h2>Contact</h2>
+              <p>
+                Available for enterprise software proposals, corporate
+                capability presentations, investor meetings, and strategic
+                partnerships.
+              </p>
             </div>
-
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="progress">
-                <span class="skill">PHP <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"
-                  >Time Management <i class="val">85%</i></span
+            <p class="lead-panel">
+              Building enterprise digital solutions for complex business
+              operations.
+            </p>
+          </div>
+          <address class="contact-card">
+            <h3>Chan Myae Lwin</h3>
+            <p>Founder & Chief Technology Officer, Lawkadat</p>
+            <ul class="contact-list">
+              <li>
+                Email:
+                <a href="mailto:lwin.chanmyae4@gmail.com"
+                  >lwin.chanmyae4@gmail.com</a
                 >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"
-                  >Project Management <i class="val">80%</i></span
+              </li>
+              <li>
+                Phone:
+                <a href="tel:+959798392286">+95 979 839 2286</a>
+              </li>
+              <li>Location: Yangon, Myanmar</li>
+              <li>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/chanmyaelwin"
+                  >linkedin.com/in/chanmyaelwin</a
                 >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">Photoshop <i class="val">55%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="55"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
+              </li>
+              <li>
+                GitHub:
+                <a href="https://github.com/ChanMyaeLwin"
+                  >github.com/ChanMyaeLwin</a
+                >
+              </li>
+            </ul>
+          </address>
         </div>
       </section>
-      <!-- End Skills Section -->
-
-      <!-- ======= Resume Section ======= -->
-      <section id="resume" class="resume">
-        <div class="container">
-          <div class="section-title">
-            <h2>Resume</h2>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-up">
-              <h3 class="resume-title">Summary</h3>
-              <div class="resume-item pb-0">
-                <h4>Chan Myae Lwin</h4>
-                <p>
-                  <em
-                    >Results-driven technology leader with extensive experience in software architecture, product development, project management, and digital transformation initiatives. Specialized in building enterprise-grade platforms, managing end-to-end software delivery, and leading technical teams to develop innovative solutions for public and private sector organizations. Strong expertise in web technologies, cloud infrastructure, business process automation, and scalable system design.</em
-                  >
-                </p>
-                <ul>
-                  <li>
-                    No. 41 (A+B), Aung Mingalar St., 4 North Ward, Thaketa,
-                    Yangon
-                  </li>
-                  <li>
-                    <a href="tel:+959798392286">+95 979 839 2286</a>
-                  </li>
-                  <li>
-                    <a href="mailto:lwin.chanmyae4@gmail.com"
-                      >lwin.chanmyae4@gmail.com</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <h3 class="resume-title">Education</h3>
-              <div class="resume-item">
-                MASTER OF BUSINESS ADMINISTRATION
-                <h4>Master of Business Administration (MBA)</h4>
-                <h5>2024 - 2026</h5>
-                <p><em>28th Batch, Yangon University of Economics</em></p>
-                <p>
-                  <em
-                    >Focused on business strategy, operations, leadership,
-                    entrepreneurship, and the insurance sector.</em
-                  >
-                </p>
-              </div>
-              <div class="resume-item">
-                BACHELOR OF ENGINEERING
-                <h4>Bachelor of Engineering (IT)</h4>
-                <h5>2011 - 2018</h5>
-                <p><em>Technology University (Hmawbi), Hmawbi, Yangon</em></p>
-                <p>
-                  Studied how to develop large scale software that powers
-                  business and industry, computer scientists. 2 months of
-                  internship at Telenor Myanmar and 2 months of internship at
-                  Huawei Technology (Yangon). Graduation thesis focused on
-                  developing a Facebook Chat Bot System for a food ordering
-                  platform.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Professional Experience</h3>
-              <div class="resume-item">
-                <h4>Founder</h4>
-                <h5>Apr 2026 - Present</h5>
-                <p><em>Lawkadat, Yangon</em></p>
-                <ul>
-                  <li>
-                    Started Lawkadat as a new venture focused on building a
-                    practical software product with strong business execution.
-                  </li>
-                  <li>
-                    Responsible for product direction, technical planning, and
-                    early-stage operations.
-                  </li>
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Project Lead / Full Stack Developer</h4>
-                <h5>Nov 2023 - Mar 2026</h5>
-                <p><em>Freelunch Project, Yangon</em></p>
-                <ul>
-                  <li>
-                    Worked on the Freelunch project after Solinx, covering
-                    product planning, full stack development, testing, and
-                    delivery.
-                  </li>
-                  <li>
-                    Collaborated with users and stakeholders to collect
-                    requirements, refine workflows, and improve the product
-                    experience.
-                  </li>
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Feb 2023 - Oct 2023</h5>
-                <p><em>Solinx Technology, Yangon </em></p>
-                <ul>
-                  <li>
-                    Lead in the design, development, and implementation of the
-                    system development.
-                  </li>
-                  <li>
-                    Mainly focus on Fatty - Food Delivery System, Xh Express -
-                    Express System.
-                  </li>
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Senior Web Developer</h4>
-                <h5>Sep 2021 - Jan 2023</h5>
-                <p><em>PRO1 GLOBAL HOME CENTER, Yangon</em></p>
-                <ul>
-                  <li>
-                    Working as a senior web developer for internal web apps with
-                    three junior colleagues from the beginning to project
-                    completion.
-                  </li>
-                  <li>
-                    Supported E-commerce Website, Member Website and Ecommerce
-                    App API Testing and Member App API Testing.
-                  </li>
-                  <li>
-                    Developed Return and Exchange System, Lucky Draw System,
-                    Repair and Installation System, and Pickup Monitoring System
-                    with Laravel.
-                  </li>
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Software Engineer</h4>
-                <h5>Jul 2019 - Sep 2021</h5>
-                <p><em>AcePlus Solutions Company Limited, Yangon</em></p>
-                <ul>
-                  <li>
-                    Working Backend Developer for Laravel Project (Insurance Member Application for AIA MyanX Application, School management System for ACE Inspiration, Member Management System for Myanmar Young Entrepreneurs Association, E-commerce Website for Ananda E-commerce, Restaurant Operation System for GR8 restaurants).
-                  </li>
-                  <li>
-                    documented Detail Design Document, Unit Testing Document, API
-Document and User Guide.
-                  </li>
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Education Consultant</h4>
-                <h5>Dec 2018 - Feb 2019</h5>
-                <p><em>CSKM Global Education Centre, Yangon</em></p>
-                <ul>
-                  <li>
-                  I promoted AIA Professional Qualifications to new students. I served as
-an advisor for teachers, and students. I prepare classes for teaching and
-manage times and places for teachers. I also advised program more
-improve like online learning system.
-                  </li>
-            
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Project Coordinator (Intern)</h4>
-                <h5>May 2018 - Jul 2018</h5>
-                <p><em>Huawei Technologies (Yangon) Co. Ltd,</em></p>
-                <ul>
-                  <li>
-               I worked as a Project Coordinator for Project Management
-Department. I supported communication with Team Members and
-Customers (MPT).
-                  </li>
-            
-                </ul>
-              </div>
-               <div class="resume-item">
-                <h4>Channel Sales Support (Intern)</h4>
-                <h5>Oct 2017 - Dec 2017</h5>
-                <p><em>Telenor Myanmar, Yangon</em></p>
-                <ul>
-                  <li>
-             I worked as Channel Support to support sale persons.
-I also checked sale persons Status and Sale Progress are working
-correctly in Service Area.
-                  </li>
-            
-                </ul>
-              </div>
-                <div class="resume-item">
-                <h4>Software Sales (OJT)</h4>
-                <h5>Jun 2016 - Oct 2016</h5>
-                <p><em>ACE Data Systems Ltd, Yangon</em></p>
-                <ul>
-                  <li>
-          I analyzed about Hotel Operation System and Cinema Ticket System of
-our company and other companies.
-I collected data and prepared the documents.
-                  </li>
-            
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Resume Section -->
-
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact">
-        <div class="container">
-          <div class="section-title">
-            <h2>Contact</h2>
-          </div>
-
-          <div class="row" data-aos="fade-in">
-            <div class="col-lg-12 d-flex align-items-stretch">
-              <div class="info">
-                <div class="address">
-                  <i class="icofont-google-map"></i>
-                  <h4>Address:</h4>
-                  <p>
-                    No. 41 (A+B), Aung Mingalar St.<br />
-                    4 North Ward, Thaketa, Yangon
-                  </p>
-                </div>
-
-                <div class="email">
-                  <i class="icofont-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>
-                    <a href="mailto:lwin.chanmyae4@gmail.com"
-                      >lwin.chanmyae4@gmail.com</a
-                    >
-                  </p>
-                </div>
-
-                <div class="phone">
-                  <i class="icofont-phone"></i>
-                  <h4>Call:</h4>
-                  <p><a href="tel:+959798392286">+95 979 839 2286</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Contact Section -->
     </main>
-    <!-- End #main -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
+    <footer class="footer">
       <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>iPortfolio</span></strong>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+        © 2026 Chan Myae Lwin.
       </div>
     </footer>
-    <!-- End  Footer -->
-
-    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-    <!-- Vendor JS Files -->
-    <script src="iPortfolio/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="iPortfolio/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="iPortfolio/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="iPortfolio/assets/vendor/php-email-form/validate.js"></script>
-    <script src="iPortfolio/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="iPortfolio/assets/vendor/counterup/counterup.min.js"></script>
-    <script src="iPortfolio/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="iPortfolio/assets/vendor/venobox/venobox.min.js"></script>
-    <script src="iPortfolio/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="iPortfolio/assets/vendor/typed.js/typed.min.js"></script>
-    <script src="iPortfolio/assets/vendor/aos/aos.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="iPortfolio/assets/js/main.js"></script>
-
   </body>
 </html>
