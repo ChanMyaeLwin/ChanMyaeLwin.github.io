@@ -24,7 +24,7 @@
     />
     <meta
       property="og:description"
-      content="Technology entrepreneur and enterprise software architect building digital solutions for enterprise organizations."
+      content="Founder, technology strategist, and enterprise software architect building digital products, enterprise systems, and business technology solutions."
     />
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://chanmyaelwin.github.io/" />
@@ -93,6 +93,7 @@
       }
 
       .nav {
+        position: relative;
         min-height: 74px;
         display: flex;
         align-items: center;
@@ -137,6 +138,65 @@
       .nav-links a:hover,
       .nav-links a:focus {
         color: var(--blue);
+      }
+
+      .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: var(--white);
+        color: var(--navy);
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        position: relative;
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 999px;
+        background: currentColor;
+        transition: background 0.18s ease;
+      }
+
+      .menu-toggle span::before,
+      .menu-toggle span::after {
+        position: absolute;
+        left: 0;
+        width: 22px;
+        height: 2px;
+        border-radius: 999px;
+        background: currentColor;
+        content: "";
+        transition:
+          top 0.18s ease,
+          transform 0.18s ease;
+      }
+
+      .menu-toggle span::before {
+        top: -7px;
+      }
+
+      .menu-toggle span::after {
+        top: 7px;
+      }
+
+      .site-header.menu-open .menu-toggle span {
+        background: transparent;
+      }
+
+      .site-header.menu-open .menu-toggle span::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      .site-header.menu-open .menu-toggle span::after {
+        top: 0;
+        transform: rotate(-45deg);
       }
 
       .hero {
@@ -484,29 +544,128 @@
       }
 
       .footer {
-        padding: 28px 0;
+        padding: 56px 0 28px;
         background: var(--navy);
         color: #c8d5e4;
         font-size: 14px;
       }
 
+      .footer-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(180px, 0.6fr) minmax(
+            220px,
+            0.7fr
+          );
+        gap: 36px;
+        padding-bottom: 36px;
+      }
+
+      .footer h2,
+      .footer h3,
+      .footer p {
+        margin-top: 0;
+      }
+
+      .footer h2 {
+        margin-bottom: 8px;
+        color: var(--white);
+        font-size: 24px;
+        letter-spacing: 0;
+      }
+
+      .footer h3 {
+        margin-bottom: 14px;
+        color: var(--white);
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .footer p {
+        max-width: 520px;
+        margin-bottom: 0;
+      }
+
+      .footer-links,
+      .footer-contact {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .footer a {
+        color: #dbeaff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .footer a:hover,
+      .footer a:focus {
+        color: var(--blue-2);
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+        padding-top: 22px;
+      }
+
+      .footer-bottom span {
+        color: #9fb2c9;
+      }
+
       @media (max-width: 980px) {
         .nav {
-          align-items: flex-start;
-          flex-direction: column;
-          padding: 16px 0;
+          min-height: 70px;
+          padding: 12px 0;
+        }
+
+        .menu-toggle {
+          display: inline-flex;
         }
 
         .nav-links {
-          flex-wrap: wrap;
-          gap: 12px 18px;
+          position: absolute;
+          top: calc(100% + 1px);
+          right: 0;
+          left: 0;
+          display: none;
+          align-items: stretch;
+          flex-direction: column;
+          gap: 0;
+          border: 1px solid var(--line);
+          border-top: 0;
+          background: var(--white);
+          box-shadow: var(--shadow);
+        }
+
+        .site-header.menu-open .nav-links {
+          display: flex;
+        }
+
+        .nav-links a {
+          display: block;
+          border-top: 1px solid var(--line);
+          padding: 14px 18px;
+          font-size: 15px;
         }
 
         .hero-grid,
         .summary-grid,
         .education-grid,
-        .contact-grid {
+        .contact-grid,
+        .footer-grid {
           grid-template-columns: 1fr;
+        }
+
+        .footer-bottom {
+          align-items: flex-start;
+          flex-direction: column;
         }
 
         .metrics,
@@ -543,8 +702,12 @@
           grid-template-columns: 1fr;
         }
 
-        .nav-links a {
-          font-size: 13px;
+        .brand strong {
+          font-size: 14px;
+        }
+
+        .brand span {
+          font-size: 12px;
         }
       }
     </style>
@@ -590,7 +753,16 @@
           <strong>CHAN MYAE LWIN</strong>
           <span>Founder & Chief Technology Officer</span>
         </a>
-        <ul class="nav-links">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="primary-menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="primary-menu">
           <li><a href="#summary">Executive Summary</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -606,22 +778,19 @@
           <div>
             <p class="eyebrow">Founder & Chief Technology Officer (CTO)</p>
             <h1 id="hero-title">Chan Myae Lwin</h1>
-            <h2>Technology Entrepreneur and Enterprise Software Architect</h2>
+            <h2>Founder, Technology Strategist, and Enterprise Software Architect</h2>
             <p class="hero-copy">
-              Technology entrepreneur and software engineering professional with
-              extensive experience in enterprise application development,
-              software architecture, digital transformation, and project
-              leadership. Proven expertise in delivering scalable technology
-              solutions across insurance, education, finance, logistics,
-              e-commerce, and business management sectors.
+              Founder and software engineering professional with extensive
+              experience in enterprise application development, software
+              architecture, digital transformation, and project leadership.
+              Proven expertise in delivering scalable technology solutions
+              across insurance, education, finance, logistics, e-commerce, and
+              business management sectors.
             </p>
             <div class="role-line" aria-label="Professional roles">
               <span>Software Architect</span>
               <span>Enterprise Solution Consultant</span>
               <span>Digital Transformation Specialist</span>
-            </div>
-            <div class="hero-actions">
-              <a class="button primary" href="#contact">Contact Me</a>
             </div>
           </div>
           <aside class="hero-card" aria-label="Executive profile card">
@@ -638,27 +807,27 @@
         </div>
       </section>
 
-      <section class="section-soft" aria-label="Trust indicators">
+      <section class="section-soft" aria-label="Focus areas">
         <div class="container metrics">
           <div class="metric">
-            <strong>8+</strong>
-            <span>Years Experience</span>
+            <strong>Enterprise Systems</strong>
+            <span>Scalable business applications</span>
           </div>
           <div class="metric">
-            <strong>20+</strong>
-            <span>Projects Delivered</span>
+            <strong>Digital Transformation</strong>
+            <span>Process modernization initiatives</span>
           </div>
           <div class="metric">
-            <strong>10+</strong>
-            <span>Industries Served</span>
+            <strong>Software Architecture</strong>
+            <span>Long-term maintainable systems</span>
           </div>
           <div class="metric">
-            <strong>Enterprise</strong>
-            <span>Software Expertise</span>
+            <strong>Product Development</strong>
+            <span>End-to-end product delivery</span>
           </div>
           <div class="metric">
-            <strong>Enterprise</strong>
-            <span>Delivery Ready</span>
+            <strong>Technology Leadership</strong>
+            <span>Technical strategy and execution</span>
           </div>
         </div>
       </section>
@@ -669,9 +838,9 @@
             <div class="section-head">
               <h2>Executive Summary</h2>
               <p>
-                A profile built for tender evaluation, enterprise proposals,
-                corporate capability presentations, investor discussions, and
-                strategic partnerships.
+                A profile built for executive introductions, corporate
+                capability presentations, investor discussions, and strategic
+                partnerships.
               </p>
             </div>
             <p class="lead-panel">
@@ -717,7 +886,7 @@
             <h2>Core Competencies</h2>
             <p>
               Technical and management capabilities required for enterprise
-              delivery, tender participation, and organizational software
+              delivery, executive capability, and organizational software
               transformation.
             </p>
           </div>
@@ -779,9 +948,9 @@
           <div class="section-head">
             <h2>Professional Services</h2>
             <p>
-              Services prepared for enterprise proposals, public-sector
-              implementation requirements, system modernization, and long-term
-              technical support.
+              Services prepared for enterprise implementation, system
+              modernization, operational transformation, and long-term technical
+              support.
             </p>
           </div>
           <div class="services-grid">
@@ -1041,7 +1210,7 @@
             <div class="section-head">
               <h2>Contact</h2>
               <p>
-                Available for enterprise software proposals, corporate
+                Available for enterprise software discussions, corporate
                 capability presentations, investor meetings, and strategic
                 partnerships.
               </p>
@@ -1086,8 +1255,84 @@
 
     <footer class="footer">
       <div class="container">
-        © 2026 Chan Myae Lwin.
+        <div class="footer-grid">
+          <div>
+            <h2>Chan Myae Lwin</h2>
+            <p>
+              Founder & Chief Technology Officer at Lawkadat, focused on
+              enterprise systems, digital transformation, software architecture,
+              and technology leadership.
+            </p>
+          </div>
+          <nav aria-label="Footer navigation">
+            <h3>Profile</h3>
+            <ul class="footer-links">
+              <li><a href="#summary">Executive Summary</a></li>
+              <li><a href="#services">Professional Services</a></li>
+              <li><a href="#projects">Project Categories</a></li>
+              <li><a href="#experience">Experience</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h3>Connect</h3>
+            <ul class="footer-contact">
+              <li>
+                <a href="mailto:lwin.chanmyae4@gmail.com"
+                  >lwin.chanmyae4@gmail.com</a
+                >
+              </li>
+              <li><a href="tel:+959798392286">+95 979 839 2286</a></li>
+              <li>
+                <a href="https://www.linkedin.com/in/chanmyaelwin"
+                  >LinkedIn</a
+                >
+              </li>
+              <li><a href="https://github.com/ChanMyaeLwin">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Chan Myae Lwin</span>
+          <span>Founder | Technology Strategist | Enterprise Software Architect</span>
+        </div>
       </div>
     </footer>
+    <script>
+      const siteHeader = document.querySelector(".site-header");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const menuLinks = document.querySelectorAll(".nav-links a");
+
+      function setMenu(open) {
+        siteHeader.classList.toggle("menu-open", open);
+        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute(
+          "aria-label",
+          open ? "Close navigation menu" : "Open navigation menu"
+        );
+      }
+
+      menuToggle.addEventListener("click", () => {
+        setMenu(!siteHeader.classList.contains("menu-open"));
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => setMenu(false));
+      });
+
+      document.addEventListener("click", (event) => {
+        if (
+          siteHeader.classList.contains("menu-open") &&
+          !siteHeader.contains(event.target)
+        ) {
+          setMenu(false);
+        }
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setMenu(false);
+        }
+      });
+    </script>
   </body>
 </html>
